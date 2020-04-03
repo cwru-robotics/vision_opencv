@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(cv_bridge)
+project(cv_bridge_compat)
 
 find_package(catkin REQUIRED COMPONENTS rosconsole sensor_msgs)
 
@@ -18,6 +18,8 @@ find_package(OpenCV 3 REQUIRED
     opencv_core
     opencv_imgproc
     opencv_imgcodecs
+  PATHS /usr/local
+  NO_DEFAULT_PATH
   CONFIG
 )
 
